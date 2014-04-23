@@ -193,17 +193,112 @@
                 </section>
 
                 <section>
-                    <h3>Accessing data</h3>
+                    <h3>Accessing JSON</h3>
+
+                    <p><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</p>
+                </section>
+
+                <section>
+                    <p>Objects are <strong>key-value</strong> stores. You access an object's <strong>value</strong> by referencing its <strong>key</strong></p>
+
+<pre><code>{
+    "key": "value",
+    "key_to_object": {
+        "yet_another_key": "yet_another_value",
+        "key_key_key": "value_value_value"
+    },
+    "key_to_array": [
+        {
+            "key": "value",
+            "another_key": "another_value"
+        },
+        {
+            "key": "value",
+            "another_key": "another_value"
+        }
+    ]
+}</code></pre>
+
+                </section>
+
+                <section>
+                    <h3>Back to the API...</h3>
+<pre><code>{
+   "status":"OK",
+   "copyright":"Copyright (c) 2014 The New York Times Company. All Rights Reserved.",
+   "results":[
+      {
+         "id": "H001042",
+         "name": "Mazie K. Hirono",
+         "role": "Senator, 1st Class",
+         "gender": "F",
+         "party": "D",
+         "times_topics_url": "",
+         "twitter_id": "maziehirono",
+         "youtube_id": "",
+         "seniority": "1",
+         "next_election": "2018",
+         "api_url": "http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/H001042.json"
+      },
+              {
+         "id": "S001194",
+         "name": "Brian Schatz",
+         "role": "Senator, 3rd Class",
+         "gender": "M",
+         "party": "D",
+         "times_topics_url": "",
+         "twitter_id": "SenBrianSchatz",
+         "youtube_id": "",
+         "seniority": "1",
+         "next_election": "2014",
+         "api_url": "http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/S001194.json"
+      }
+        ]
+}</code></pre>
+                </section>
+
+                <section>
+                    <h3>And in JavaScript...</h3>
+<pre><code>$.getJSON('apiURL', function(data) {
+    // store your results!
+    var results = data.results;
+
+    // loop through your results!
+    $.each(results, function(key, value) {
+        console.log(key, value);
+    });
+});</code></pre>
+
+                    <h3>What does this return?</h3>
+                </section>
+
+                <section>
+                    <h3>Access particular values in your results</h3>
+<pre><code>$.getJSON('apiURL', function(data) {
+    // store your results!
+    var results = data.results;
+
+    // loop through your results!
+    $.each(results, function(key, value) {
+        console.log(value.twitter_id);
+
+        // or!
+        console.log(value['twitter_id']);
+    });
+});</code></pre>
                 </section>
 
                 <section>
                     <h3>Post-work</h3>
                     <ol>
-                        <li>Fork and clone this repo: bit.ly/unclassapi</li>
+                        <li>Fork and clone this repo: <a target="_blank" href="http://bit.ly/unclassapi">bit.ly/unclassapi</a></li>
                         <li>Edit the <code>index.html</code> file to create an unordered list of all senators from Illinois.</li>
                         <li>Submit a pull request with your work.</li>
                     </ol>
                 </section>
+
+                <section>
+                    <p>Get these slides at <a href="http://tylerjfisher.com/apis">tylerjfisher.com/apis</a></p>
 
             </div>
 
