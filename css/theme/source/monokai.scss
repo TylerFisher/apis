@@ -34,8 +34,8 @@ $selectionColor: #000;
     h1, h2, h3, h4, h5, h6 {
         text-shadow: none;
     }
-    h1 {
-        font-weight: 400;
+    h1, h2 {
+        font-weight: 900;
     }
     .big {
        font-size: 500%;
@@ -71,6 +71,21 @@ $selectionColor: #000;
     p.small {
         font-size: 24px;
     }
+    dt {
+        font-weight: bold;
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    dd {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    dt:first-child {
+        margin-top: 0;
+    }
+
 }
 
 .title-slide .reveal .state-background {

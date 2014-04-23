@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>PRESENTATION TITLE HERE - Tyler Fisher</title>
+        <title>Introduction to APIs - Tyler Fisher</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+        <meta name="author" content="Tyler Fisher">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -18,7 +18,7 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <link rel="stylesheet" href="css/reveal.min.css">
-        <link rel="stylesheet" href="css/theme/yellows.css" id="theme">
+        <link rel="stylesheet" href="css/theme/monokai.css" id="theme">
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -45,6 +45,23 @@
 
             <div class="slides">
                 <section>
+                    <h1>Intro to APIs</h1>
+                    <p>by Tyler Fisher | @tylrfishr</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>API</h3>
+                    <p><strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="http://nick.sg/wat.gif" width="600">
 
                     <aside class="notes">
 
@@ -52,6 +69,19 @@
                 </section>
 
                 <section>
+                    <p>It's time to go back to how the Internet works!</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <dl>
+                        <dt>Client</dt>
+                        <dd>A computer that makes requests</dd>
+                        <dt>Server</dt>
+                        <dd>A computer that responds to requests</dd>
+                    </dl>
 
                     <aside class="notes">
 
@@ -59,59 +89,120 @@
                 </section>
 
                 <section>
+                    <h3>REST</h3>
 
+                    <p><strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</p>
                     <aside class="notes">
 
                     </aside>
                 </section>
 
                 <section>
-
+                    <p>There are different types of APIs, but we're going to work with RESTful APIs.</p>
                     <aside class="notes">
 
                     </aside>
                 </section>
 
                 <section>
-
+                    <p>APIs are a way for your applications to talk to servers.</p>
                     <aside class="notes">
 
                     </aside>
                 </section>
 
                 <section>
-
+                    <p>RESTful APIs work on top of HTTP, just like your web browser.</p>
                     <aside class="notes">
 
                     </aside>
                 </section>
 
                 <section>
+                    <p>With APIs, we can send and receive data from servers for our own use.</p>
+                </section>
 
+                <section data-state="title-slide">
+                    <h1 class="title-slide-text">Making API Requests</h1>
+                </section>
+
+                <section>
+                    <h2>The Four Verbs of HTTP</h2>
+                </section>
+
+                <section>
+                    <dl>
+                        <dt>GET</dt>
+                        <dd>Retrieve information</dd>
+
+                        <dt>POST</dt>
+                        <dd>Send new information</dd>
+
+                        <dt>PUT</dt>
+                        <dd>Update existing information</dd>
+
+                        <dt>DELETE</dt>
+                        <dd>remove existing information</dd>
+                    </dl>
                     <aside class="notes">
 
                     </aside>
                 </section>
 
                 <section>
-
-                    <aside class="notes">
-
-                    </aside>
+                    <p>Every API request will utilize one of these verbs.</p>
                 </section>
 
                 <section>
+                    <h3>Let's make a GET Request</h3>
 
-                    <aside class="notes">
+                    <p>We'll use the <a target="_blank" href="bit.ly/nytcongress">NYTimes Congress API</a></p>
 
-                    </aside>
+                    <p><a target="_blank" href="bit.ly/nytcongress">bit.ly/nytcongress</a></p>
                 </section>
 
                 <section>
+                    <h3>Navigating API Documentation</h3>
 
-                    <aside class="notes">
+                    <dl>
+                        <dt>Base URL</dt>
+                        <dd>The URL that all of your requests will be based off of.</dd>
+                        <dt>Response format</dt>
+                        <dd>Know what format you want your data in. You probably want JSON.</dd>
+                        <dt>Sample Request URLs</dt>
+                        <dd>Look for sample request URLs and use those as starting points.</dd>
+                    </dl>
+                </section>
 
-                    </aside>
+                <section>
+                    <pre>http://api.nytimes.com/svc/politics/<strong>{version}</strong>/us/legislative/congress/members/<strong>{chamber}</strong>/<strong>{state}</strong>/<strong>{district*}</strong>/current<strong>[.response-format]</strong>?api-key=<strong>{your-API-key}</strong></pre>
+                </section>
+
+                <section data-state="title-slide">
+                    <h1 class="title-slide-text">Coding with APIs</h1>
+                </section>
+
+                <section>
+                    <p>jQuery is your friend.</p>
+                </section>
+
+                <section>
+<pre><code>$.getJSON('apiURL', function(data) {
+    // all your code in here
+});</code></pre>
+                </section>
+
+                <section>
+                    <h3>Accessing data</h3>
+                </section>
+
+                <section>
+                    <h3>Post-work</h3>
+                    <ol>
+                        <li>Fork and clone this repo: bit.ly/unclassapi</li>
+                        <li>Edit the <code>index.html</code> file to create an unordered list of all senators from Illinois.</li>
+                        <li>Submit a pull request with your work.</li>
+                    </ol>
                 </section>
 
             </div>

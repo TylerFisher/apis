@@ -135,8 +135,8 @@ body {
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   text-shadow: none; }
-.reveal h1 {
-  font-weight: 400; }
+.reveal h1, .reveal h2 {
+  font-weight: 900; }
 .reveal .big {
   font-size: 500%;
   font-weight: bold; }
@@ -162,6 +162,15 @@ body {
   font-size: 40px; }
 .reveal p.small {
   font-size: 24px; }
+.reveal dt {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 40px; }
+.reveal dd {
+  text-align: left;
+  margin-left: 20px; }
+.reveal dt:first-child {
+  margin-top: 0; }
 
 .title-slide .reveal .state-background {
   background-color: #fd971f; }
